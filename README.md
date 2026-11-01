@@ -14,12 +14,9 @@ the full architecture.
 py -m venv .venv
 .venv\Scripts\activate
 python -m pip install --upgrade pip
-pip install -r requirements-ai.txt
+pip install -r requirements.txt
 streamlit run app.py
 ```
-
-This includes the optional AI model. For a smaller install without it, use
-`requirements.txt` instead.
 
 On macOS/Linux use `python3 -m venv .venv` and `source .venv/bin/activate`.
 
@@ -28,10 +25,11 @@ Open the URL shown in the terminal (usually http://localhost:8501).
 ## Deploying online
 
 The app runs on [Streamlit Community Cloud](https://share.streamlit.io) for free:
-choose this repository, the `main` branch and `app.py`. It installs `requirements.txt`,
-which leaves out the AI model because PyTorch is too large for free hosting, so the
-meaning-based score is switched off online. Uploads are limited to 5 MB in
-`.streamlit/config.toml`.
+choose this repository, the `main` branch and `app.py`. `requirements.txt` uses the
+CPU-only build of PyTorch to keep the install small, and the AI model is downloaded the
+first time someone runs an analysis, so that first run is slower. The app used about
+650 MB of memory with the model loaded when measured locally. Uploads are limited to
+5 MB in `.streamlit/config.toml`.
 
 An online app runs on someone else's server, so uploaded resumes leave your computer.
 The app doesn't save them, but it has no login, so anyone with the link can use it.
@@ -47,7 +45,7 @@ The app doesn't save them, but it has no login, so anyone with the link can use 
   - *Meaning similarity* – uses the local `all-MiniLM-L6-v2` model, so
     "built neural networks" can match "deep learning". The model (about 90 MB)
     is downloaded on first use, then runs offline. This is optional: without
-    `sentence-transformers` installed (see `requirements-ai.txt`), the checkbox is disabled.
+    `sentence-transformers` installed, the checkbox is disabled.
 - **Skill dictionary** for tech, marketing, HR, finance, design and soft skills,
   with **synonyms** (e.g. JS → JavaScript, K8s → Kubernetes, NLP → natural
   language processing). Edit `SKILL_CATEGORIES` and `SYNONYMS` in

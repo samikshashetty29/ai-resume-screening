@@ -1,4 +1,0 @@
-# Optional: meaning-based (semantic) comparison. Large download (installs PyTorch).
-# Kept separate so the online version stays small enough for free hosting.
--r requirements.txt
-sentence-transformers>=3.0

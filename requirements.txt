@@ -1,6 +1,10 @@
+# CPU-only PyTorch: the default Linux build adds large GPU packages the app never uses.
+--extra-index-url https://download.pytorch.org/whl/cpu
 streamlit>=1.50
 scikit-learn>=1.4
 pypdf>=4.0
 pandas>=2.0
 plotly>=5.20
 pytest>=8.0
+torch
+sentence-transformers>=3.0

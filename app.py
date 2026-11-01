@@ -56,8 +56,7 @@ with col_left:
              "(about 90 MB) on first use, then runs offline.",
     )
     if not SEMANTIC_AVAILABLE:
-        st.caption("Meaning-based comparison is off because the AI model isn't installed "
-                   "here. It works when you run the app yourself with `requirements-ai.txt`.")
+        st.caption("Install `sentence-transformers` to enable meaning-based comparison.")
 with col_right:
     job_source = st.radio("Job description", [PASTE_JOB, UPLOAD_JOB], horizontal=True)
     if job_source == PASTE_JOB:
