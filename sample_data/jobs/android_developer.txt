@@ -1,0 +1,17 @@
+Job Title: Android Developer
+
+We are looking for an Android Developer to build features for our fitness app, used
+by over one million people. You will write clean Kotlin code, work with REST APIs,
+and improve app performance.
+
+Requirements:
+- 2+ years of experience in Android development
+- Kotlin and Java
+- REST API integration
+- SQLite or local data storage
+- Git and code reviews
+
+Nice to have:
+- Firebase
+- Swift or iOS experience
+- Agile teams

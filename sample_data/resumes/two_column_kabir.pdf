@@ -1,0 +1,57 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1074 >>
+stream
+BT
+/F1 10 Tf
+1 0 0 1 40 790 Tm (Kabir Sethi) Tj
+1 0 0 1 225 790 Tm (SUMMARY) Tj
+1 0 0 1 40 775 Tm (kabir@example.com) Tj
+1 0 0 1 225 775 Tm (Frontend developer with 3 years of experience in React.) Tj
+1 0 0 1 40 745 Tm (SKILLS) Tj
+1 0 0 1 225 745 Tm (EXPERIENCE) Tj
+1 0 0 1 40 730 Tm (JavaScript) Tj
+1 0 0 1 225 730 Tm (Frontend Developer, PixelCart \(2023 - present\)) Tj
+1 0 0 1 40 715 Tm (TypeScript) Tj
+1 0 0 1 225 715 Tm (- Built React and TypeScript pages for 80,000 shoppers.) Tj
+1 0 0 1 40 700 Tm (React) Tj
+1 0 0 1 225 700 Tm (- Connected pages to REST APIs on a Node.js backend.) Tj
+1 0 0 1 40 685 Tm (Node.js) Tj
+1 0 0 1 225 685 Tm (- Improved page load time by 35% with CSS cleanup.) Tj
+1 0 0 1 40 670 Tm (HTML) Tj
+1 0 0 1 225 670 Tm (- Reviewed code in Git with a team of 6 developers.) Tj
+1 0 0 1 40 655 Tm (CSS) Tj
+1 0 0 1 40 640 Tm (Git) Tj
+1 0 0 1 225 640 Tm (PROJECTS) Tj
+1 0 0 1 225 625 Tm (- Recipe search site in JavaScript, HTML and CSS.) Tj
+1 0 0 1 40 610 Tm (EDUCATION) Tj
+1 0 0 1 40 595 Tm (B.Tech Computer Science) Tj
+1 0 0 1 40 580 Tm (2023) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001367 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1437
+%%EOF

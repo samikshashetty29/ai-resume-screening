@@ -1,0 +1,14 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local tool settings
+.claude/
+
+# Personal files, not part of the project
+pretty-creative-resume-template-black.pdf
+pretty-resume-pdf/
+pretty-resume-pdf*.zip
+screening_report_*.txt

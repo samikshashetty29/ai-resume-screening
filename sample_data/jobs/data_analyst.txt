@@ -1,0 +1,5 @@
+We are hiring a Data Analyst to join our analytics team. The ideal candidate has
+strong Python and SQL skills, experience with Pandas and NumPy, and can build
+dashboards in Tableau or Power BI. Familiarity with machine learning, statistics,
+Docker, and AWS is a plus. You will work with stakeholders, so good communication
+and problem solving skills are essential. Experience with Git and Agile is preferred.

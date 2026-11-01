@@ -1,0 +1,9 @@
+streamlit>=1.50
+scikit-learn>=1.4
+pypdf>=4.0
+pandas>=2.0
+plotly>=5.20
+pytest>=8.0
+# Optional: meaning-based (semantic) comparison. Large download (installs PyTorch).
+# The app still works without it; the "compare by meaning" option is then disabled.
+sentence-transformers>=3.0

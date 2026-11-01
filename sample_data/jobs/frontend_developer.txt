@@ -1,0 +1,5 @@
+We are looking for a Frontend Developer to build fast, accessible web applications.
+You will develop user interfaces in React and TypeScript, write clean HTML and CSS,
+and integrate with REST API services built in Node.js. Experience with GraphQL,
+Git, and working in an Agile Scrum team is expected. Knowledge of Docker and
+testing tools is a plus. Strong communication and problem solving skills required.

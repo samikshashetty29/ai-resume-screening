@@ -1,0 +1,54 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 756 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+50 790 Td
+(Vikram Iyer - Financial Analyst) Tj T*
+(Email: vikram@example.com) Tj T*
+() Tj T*
+(SUMMARY) Tj T*
+(Financial analyst with 4 years of experience in budgeting and financial analysis.) Tj T*
+() Tj T*
+(SKILLS) Tj T*
+(Excel, financial modeling, financial analysis, budgeting, accounting, Power BI) Tj T*
+(Attention to detail, communication) Tj T*
+() Tj T*
+(EXPERIENCE) Tj T*
+(Financial Analyst, Lakeside Retail \(2021 - present\)) Tj T*
+(- Built financial modeling templates in Excel for 15 stores.) Tj T*
+(- Led annual budgeting and reduced forecast errors by 18%.) Tj T*
+(- Prepared monthly Power BI reports on costs and margins for senior managers.) Tj T*
+() Tj T*
+(EDUCATION) Tj T*
+(B.Com Accounting and Finance, 2021) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001048 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1118
+%%EOF

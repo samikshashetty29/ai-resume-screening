@@ -1,0 +1,54 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 752 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+50 790 Td
+(Rohan Desai - Project Manager) Tj T*
+(Email: rohan@example.com) Tj T*
+() Tj T*
+(SUMMARY) Tj T*
+(Project manager with 6 years of experience delivering software for clients.) Tj T*
+() Tj T*
+(SKILLS) Tj T*
+(Project management, Agile, Scrum, stakeholder management, Jira, budgeting) Tj T*
+(Leadership, communication) Tj T*
+() Tj T*
+(EXPERIENCE) Tj T*
+(Project Manager, Finlay Systems \(2019 - present\)) Tj T*
+(- Led Agile delivery of 12 client projects worth over 2 million dollars.) Tj T*
+(- Ran Scrum ceremonies and tracked work in Jira for teams of 10 developers.) Tj T*
+(- Managed stakeholder management and monthly budgeting reports for clients.) Tj T*
+() Tj T*
+(EDUCATION) Tj T*
+(Bachelor of Engineering, 2019) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001044 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1114
+%%EOF

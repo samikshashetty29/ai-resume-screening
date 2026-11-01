@@ -1,0 +1,5 @@
+Machine Learning Engineer wanted to design, train and deploy deep learning models.
+Required: strong Python, PyTorch or TensorFlow, scikit-learn, NumPy and Pandas.
+Experience with natural language processing or computer vision projects. You will
+deploy models using Docker and Kubernetes on AWS or GCP and maintain CI/CD
+pipelines. A solid background in statistics and Linux is essential.

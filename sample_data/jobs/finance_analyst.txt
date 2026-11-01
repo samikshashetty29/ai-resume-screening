@@ -1,0 +1,18 @@
+Job Title: Financial Analyst
+
+About the role
+Northwind Traders is looking for a Financial Analyst to support budgeting and
+forecasting across our retail business. You will prepare monthly reports for senior
+managers and help them understand costs and margins.
+
+Requirements:
+- 3+ years of experience in financial analysis
+- Strong Excel and financial modeling skills
+- Budgeting and forecasting experience
+- Attention to detail and clear communication
+- Bachelor's degree in finance, accounting or commerce
+
+Nice to have:
+- Power BI or Tableau
+- SQL
+- Auditing or taxation knowledge

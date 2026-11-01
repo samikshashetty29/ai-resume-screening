@@ -1,0 +1,56 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 800 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+50 790 Td
+(Diya Nair - Android Developer) Tj T*
+(GitHub: https://github.example.dev/diya) Tj T*
+() Tj T*
+(SUMMARY) Tj T*
+(Android developer with 2 years of experience building consumer mobile apps.) Tj T*
+() Tj T*
+(SKILLS) Tj T*
+(Kotlin, Java, SQLite, REST APIs, Git, Firebase, Agile) Tj T*
+() Tj T*
+(EXPERIENCE) Tj T*
+(Android Developer, StepUp Apps \(2024 - present\)) Tj T*
+(- Built workout tracking features in Kotlin for an app with 200,000 users.) Tj T*
+(- Connected the app to REST APIs and stored offline data in SQLite.) Tj T*
+(- Reduced crash rate by 40% through Git code reviews and testing.) Tj T*
+() Tj T*
+(PROJECTS) Tj T*
+(- Expense tracker Android app in Java, published on the Play Store.) Tj T*
+() Tj T*
+(EDUCATION) Tj T*
+(B.E. Computer Engineering, 2024) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001092 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1162
+%%EOF

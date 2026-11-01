@@ -1,0 +1,53 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 698 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+50 790 Td
+(Priya Sharma - Data Analyst) Tj T*
+(Email: priya@example.com) Tj T*
+() Tj T*
+(SUMMARY) Tj T*
+(Data analyst with 2 years of experience in Python, SQL and data visualization.) Tj T*
+() Tj T*
+(SKILLS) Tj T*
+(Python, Pandas, NumPy, SQL, MySQL, Excel, Power BI, Matplotlib, Git, Statistics) Tj T*
+(Machine learning with scikit-learn. Strong communication and teamwork.) Tj T*
+() Tj T*
+(EXPERIENCE) Tj T*
+(Junior Data Analyst, ABC Retail \(2023 - present\)) Tj T*
+(- Built sales dashboards in Power BI and automated reports with Python.) Tj T*
+(- Wrote SQL queries to clean and analyze customer data.) Tj T*
+() Tj T*
+(EDUCATION) Tj T*
+(B.Sc. Computer Science, 2023) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000990 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1060
+%%EOF

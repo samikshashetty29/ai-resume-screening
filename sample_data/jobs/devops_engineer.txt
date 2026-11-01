@@ -1,0 +1,16 @@
+Job Title: DevOps Engineer
+
+We are hiring a DevOps Engineer to keep our cloud platform fast and reliable. You
+will automate deployments, manage infrastructure, and help developers ship safely.
+
+Requirements:
+- 4+ years of experience in DevOps or infrastructure roles
+- Docker and Kubernetes in production
+- AWS or Azure
+- CI/CD pipelines with Jenkins or GitHub
+- Linux administration and Python scripting
+- Problem solving under pressure
+
+Preferred:
+- Terraform
+- Agile or Scrum teams
