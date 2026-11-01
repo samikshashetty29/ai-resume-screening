@@ -42,6 +42,8 @@ st.write(
     "and optionally an AI model that compares meaning."
 )
 st.info(LIMITATION_NOTE)
+st.caption("Your files are used only for this analysis and are not saved by this app. "
+           "Avoid uploading documents with sensitive details such as ID numbers.")
 
 col_left, col_right = st.columns(2)
 with col_left:
@@ -54,7 +56,8 @@ with col_left:
              "(about 90 MB) on first use, then runs offline.",
     )
     if not SEMANTIC_AVAILABLE:
-        st.caption("Install `sentence-transformers` to enable meaning-based comparison.")
+        st.caption("Meaning-based comparison is off because the AI model isn't installed "
+                   "here. It works when you run the app yourself with `requirements-ai.txt`.")
 with col_right:
     job_source = st.radio("Job description", [PASTE_JOB, UPLOAD_JOB], horizontal=True)
     if job_source == PASTE_JOB:

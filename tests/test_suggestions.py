@@ -330,7 +330,8 @@ def test_report_without_suggestions_has_no_section():
 def run_app(resume=None, job_pdf=None, job_text=None):
     """Drive app.py the way a user would. Pass PDF bytes for uploads."""
     at = AppTest.from_file(str(ROOT / "app.py"), default_timeout=60).run()
-    at.checkbox[0].set_value(False).run()  # keep these tests offline
+    if not at.checkbox[0].disabled:  # keep these tests offline
+        at.checkbox[0].set_value(False).run()
     if job_pdf is not None:
         at.radio[0].set_value("Upload PDF").run()
     if resume is not None:

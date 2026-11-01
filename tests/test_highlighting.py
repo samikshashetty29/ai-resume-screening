@@ -124,7 +124,8 @@ def test_skill_matching_on_cleaned_text_still_works():
 
 def run_app(resume_name, job_name):
     at = AppTest.from_file(str(ROOT / "app.py"), default_timeout=60).run()
-    at.checkbox[0].set_value(False).run()
+    if not at.checkbox[0].disabled:  # keep these tests offline
+        at.checkbox[0].set_value(False).run()
     at.file_uploader[0].upload("resume.pdf", (SAMPLES / "resumes" / resume_name).read_bytes(),
                                "application/pdf").run()
     at.text_area[0].set_value((SAMPLES / "jobs" / job_name).read_text()).run()
