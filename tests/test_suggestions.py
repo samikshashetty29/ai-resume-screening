@@ -396,3 +396,22 @@ def _short_pdf():
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module.build_pdf([["Too short to compare."]])
+
+
+def test_pdf_job_headings_without_colons_or_blank_lines():
+    # How a job PDF often extracts: bare headings straight after bullet points.
+    job = ("Responsibilities\n• Build dashboards\nRequirements\n• Python and SQL\n"
+           "Nice to have\n• Tableau\n")
+    levels = dict(split_job_sentences(job))
+    assert levels["Python and SQL"] == REQUIRED
+    assert levels["Tableau"] == OPTIONAL
+
+
+@pytest.mark.parametrize("job", sorted(p.stem for p in (SAMPLES / "realistic_jobs").glob("*.txt")))
+def test_realistic_job_pdf_reads_like_its_text(job):
+    folder = SAMPLES / "realistic_jobs"
+    from_text = split_job_sentences((folder / f"{job}.txt").read_text(encoding="utf-8"))
+    from_pdf = split_job_sentences(extract_text_from_pdf((folder / f"{job}.pdf").read_bytes()))
+    for skill in ("python", "sql", "tableau", "docker", "communication", "gcp", "leadership"):
+        assert skill_importance(skill, from_text)[0] == skill_importance(skill, from_pdf)[0]
+    assert extract_job_title((folder / f"{job}.txt").read_text(encoding="utf-8"))

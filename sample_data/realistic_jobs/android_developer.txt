@@ -1,0 +1,38 @@
+Job Title: Android Developer
+Company: Pulse Fit
+Location: Bengaluru, India (hybrid)
+Employment type: Full-time
+
+About us:
+Pulse Fit is a fitness app used by over one million people to track workouts and meals.
+
+About the role:
+We are looking for an Android Developer to build features for our fitness app. You will
+write clean Kotlin code, work with REST APIs and improve app performance.
+
+Responsibilities:
+- Build new features in Kotlin
+- Integrate with REST API services
+- Store data offline with SQLite or Room
+- Improve app start time and stability
+- Review code and write tests
+
+Requirements:
+- 2+ years of experience in Android development
+- Kotlin and Java
+- REST API integration
+- SQLite or local data storage
+- Git and code reviews
+
+Nice to have:
+- Firebase
+- Swift or iOS experience
+- Agile teams
+
+What we offer:
+- Health insurance
+- Free premium membership and gym allowance
+- Flexible hours
+
+How to apply:
+Send your resume and a link to an app you worked on.

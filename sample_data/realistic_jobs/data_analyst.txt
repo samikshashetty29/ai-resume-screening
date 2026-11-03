@@ -1,0 +1,42 @@
+Job Title: Data Analyst
+Company: Marigold Retail Pvt. Ltd.
+Location: Bengaluru, India (hybrid, 3 days in office)
+Employment type: Full-time
+
+About us:
+Marigold Retail runs 120 grocery and home stores across South India and a fast-growing
+online shop. Our analytics team helps store, marketing and supply chain leaders make
+decisions with data instead of guesswork.
+
+About the role:
+We are hiring a Data Analyst to own reporting for our sales and customer teams. You will
+turn raw transaction data into clear dashboards and insights, and work closely with
+managers who are not data experts.
+
+Responsibilities:
+- Build and maintain dashboards in Power BI or Tableau for sales, stock and loyalty metrics
+- Write SQL queries against our PostgreSQL warehouse to answer business questions
+- Automate recurring reports with Python and Pandas
+- Design and analyse A/B tests for offers and promotions
+- Present findings to store and marketing managers in plain language
+
+Requirements:
+- 2+ years of experience in data analysis or business intelligence
+- Strong SQL and Python (Pandas, NumPy)
+- Hands-on experience with Power BI or Tableau
+- A good grasp of statistics
+- Clear communication and problem solving skills
+- Bachelor's degree in statistics, mathematics, computer science or a related field
+
+Nice to have:
+- Experience with machine learning for forecasting or segmentation
+- Git and Agile ways of working
+- Exposure to AWS
+
+What we offer:
+- Health insurance for you and your family
+- Hybrid working and flexible hours
+- A yearly learning budget of INR 40,000
+
+How to apply:
+Send your resume and a short note about a dashboard you are proud of.

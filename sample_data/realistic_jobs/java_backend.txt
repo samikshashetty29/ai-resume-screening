@@ -1,0 +1,41 @@
+Job Title: Senior Backend Java Developer
+Company: Ledgerly Payments
+Location: Bengaluru, India (hybrid)
+Employment type: Full-time
+
+About us:
+Ledgerly processes payments and refunds for 400 online businesses. Reliability and
+security matter in everything we build.
+
+About the role:
+We are hiring a Senior Backend Java Developer to build scalable microservices for our
+payments platform and to mentor junior developers.
+
+Responsibilities:
+- Design and build microservices in Java and Spring Boot
+- Design REST API contracts used by partner banks and merchants
+- Tune PostgreSQL and MySQL databases for high volumes
+- Run services on Docker and Kubernetes with Jenkins CI/CD pipelines
+- Review code and mentor junior developers
+
+Requirements:
+- 5+ years of experience in backend development
+- Strong Java and Spring Boot
+- REST API design
+- PostgreSQL or MySQL
+- Docker, Kubernetes and CI/CD with Jenkins
+- Linux and Git
+- Leadership skills to mentor others
+
+Nice to have:
+- Kafka or other messaging systems
+- Agile delivery experience
+- Experience in payments or banking
+
+What we offer:
+- Health insurance and yearly bonus
+- Employee stock options
+- Flexible hybrid working
+
+How to apply:
+Send your resume and tell us about a system you made faster or more reliable.

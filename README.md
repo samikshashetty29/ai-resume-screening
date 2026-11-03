@@ -95,8 +95,8 @@ src/charts.py             Plotly gauges and charts
 src/matcher.py            TF-IDF + cosine similarity
 src/report_generator.py   Plain-text report
 tests/                    pytest unit tests
-sample_data/              Sample resumes (short ones and full-length realistic ones),
-                          job descriptions and invalid files (see its README)
+sample_data/              Sample resumes and job descriptions (short ones and
+                          full-length realistic ones) and invalid files (see its README)
 ```
 
 ## Running tests

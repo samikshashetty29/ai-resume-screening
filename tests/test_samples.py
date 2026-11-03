@@ -153,3 +153,22 @@ def test_realistic_resume_scores_highest_on_its_own_job(resume, job):
     assert own > max(calculate_similarity(text, job_text(j)) for j in FULL_JOBS if j != job)
     result = compare_skills(text, job_text(job))
     assert len(result["matched_skills"]) > len(result["missing_skills"])
+
+
+# --- Full-length, realistic job descriptions --------------------------------
+
+REALISTIC_JOBS = SAMPLES / "realistic_jobs"
+
+
+def test_every_realistic_job_has_a_pdf_and_a_resume():
+    names = sorted(p.name for p in REALISTIC_JOBS.glob("*.txt"))
+    assert names == sorted(set(REALISTIC_PAIRS.values()))
+    assert all((REALISTIC_JOBS / n).with_suffix(".pdf").exists() for n in names)
+
+
+@pytest.mark.parametrize("resume,job", REALISTIC_PAIRS.items())
+def test_realistic_resume_scores_highest_on_its_realistic_job(resume, job):
+    text = resume_text(resume, REALISTIC)
+    jobs = {p.name: clean_text(p.read_text(encoding="utf-8")) for p in REALISTIC_JOBS.glob("*.txt")}
+    scores = {name: calculate_similarity(text, job) for name, job in jobs.items()}
+    assert max(scores, key=scores.get) == job

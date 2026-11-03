@@ -1,0 +1,41 @@
+Job Title: Frontend Developer
+Company: Basket Lane Technologies
+Location: Bengaluru, India (hybrid)
+Employment type: Full-time
+
+About us:
+Basket Lane is an online marketplace for local shops, used by 2 million shoppers every
+month. Our product team ships small improvements every day.
+
+About the role:
+We are looking for a Frontend Developer to build fast, accessible pages for our shopping
+and checkout experience. You will work with designers, backend engineers and product
+managers in a small Agile team.
+
+Responsibilities:
+- Build user interfaces in React and TypeScript
+- Write clean, semantic HTML and CSS that works on every screen size
+- Integrate with REST API and GraphQL services built in Node.js
+- Write unit tests and take part in code reviews
+- Improve page speed and accessibility
+
+Requirements:
+- 3+ years of experience in frontend development
+- Strong React, TypeScript and JavaScript
+- Solid HTML and CSS skills
+- Experience working with REST API services
+- Git and GitHub for version control
+- Good communication and problem solving skills
+
+Nice to have:
+- GraphQL
+- Docker
+- Experience in Agile or Scrum teams
+
+What we offer:
+- Health insurance and a yearly wellness allowance
+- Latest laptop and home office setup
+- Two learning days every quarter
+
+How to apply:
+Share your resume and a link to something you have built.

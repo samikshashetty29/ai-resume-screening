@@ -44,6 +44,28 @@ fpdf2 and the Calibri font that comes with Windows.
 | `nikhil_bhat_android_developer.pdf` | Android, 3 years: Kotlin, Compose, Room | `android_developer.txt` |
 | `pooja_iyer_project_manager.pdf` | Project manager, 7 years: Scrum, PMP | `project_manager.txt` |
 
+## Full-length job descriptions (`realistic_jobs/`)
+
+Job adverts written like real postings, with the company, location, "About us", "About
+the role", responsibilities, requirements, nice-to-haves, benefits and how to apply.
+Each `.txt` has a formatted PDF copy with the same name. They pair with the resumes in
+`realistic_resumes/`, and each resume scores highest on its own job. The PDFs are made
+by `python sample_data/make_realistic_resumes.py` from the `.txt` files.
+
+| File | Company (fictional) | Matching resume |
+|---|---|---|
+| `data_analyst` | Marigold Retail | `ishita_rao_data_analyst.pdf` |
+| `frontend_developer` | Basket Lane Technologies | `rohit_kulkarni_frontend_developer.pdf` |
+| `ml_engineer` | Saransh AI Labs | `ananya_menon_ml_engineer.pdf` |
+| `java_backend` | Ledgerly Payments | `vivek_shetty_java_backend.pdf` |
+| `marketing_executive` | Tadka Foods | `sanya_kapoor_marketing_executive.pdf` |
+| `hr_coordinator` | Northstar Logistics | `kavya_reddy_hr_coordinator.pdf` |
+| `finance_analyst` | Rangoli Home Stores | `arnav_desai_financial_analyst.pdf` |
+| `ui_ux_designer` | Yatra Kit | `meher_joshi_ui_ux_designer.pdf` |
+| `devops_engineer` | Skyforge Cloud | `farah_khan_devops_engineer.pdf` |
+| `android_developer` | Pulse Fit | `nikhil_bhat_android_developer.pdf` |
+| `project_manager` | Bluewave Software Services | `pooja_iyer_project_manager.pdf` |
+
 ## Job descriptions (`jobs/`)
 
 | File | What it tests |

@@ -101,6 +101,7 @@ def split_job_sentences(job_text):
     pairs = []
     heading_level = None
     buffer = []
+    after_bullet = False
 
     def flush():
         if buffer:
@@ -113,13 +114,16 @@ def split_job_sentences(job_text):
         stripped = line.strip()
         if not stripped:
             flush()
+            after_bullet = False
             continue
         is_bullet = bool(_BULLET_RE.match(line))
         is_short = len(stripped.split()) <= 6
         # Without a closing colon, a heading is a bare phrase on its own line, so it can't
         # continue a wrapped sentence or contain punctuation ("Required: Python and SQL.").
-        is_bare_heading = (not buffer and not re.search(r"[.,:;]", stripped)
-                           and _HEADING_START_RE.match(stripped))
+        # PDFs often drop blank lines, so a heading may also come straight after a bullet.
+        is_bare_heading = ((not buffer or after_bullet) and not re.search(r"[.,:;]", stripped)
+                           and len(stripped.split()) <= 4 and _HEADING_START_RE.match(stripped))
+        after_bullet = is_bullet
         if not is_bullet and is_short and (stripped.endswith(":") or is_bare_heading):
             flush()
             if _OPTIONAL_RE.search(stripped):

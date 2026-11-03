@@ -1,0 +1,39 @@
+Job Title: DevOps Engineer
+Company: Skyforge Cloud
+Location: Noida, India (hybrid)
+Employment type: Full-time
+
+About us:
+Skyforge builds software for online schools, serving 3 million students a day.
+
+About the role:
+We are hiring a DevOps Engineer to keep our cloud platform fast and reliable. You will
+automate deployments, manage infrastructure and help developers ship safely.
+
+Responsibilities:
+- Run Docker and Kubernetes clusters in production on AWS
+- Build and maintain CI/CD pipelines in Jenkins and GitHub Actions
+- Manage infrastructure as code with Terraform
+- Monitor systems and lead incident reviews
+- Reduce cloud costs
+
+Requirements:
+- 4+ years of experience in DevOps or infrastructure roles
+- Docker and Kubernetes in production
+- AWS or Azure
+- CI/CD pipelines with Jenkins or GitHub
+- Linux administration and Python scripting
+- Problem solving under pressure
+
+Nice to have:
+- Terraform
+- Experience in Agile or Scrum teams
+- GCP
+
+What we offer:
+- Health insurance
+- On-call allowance
+- Certification costs paid
+
+How to apply:
+Send your resume and tell us about an outage you helped fix.

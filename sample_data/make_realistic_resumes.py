@@ -1,10 +1,12 @@
-"""Generate full-length, realistically formatted sample resumes.
+"""Generate full-length, realistically formatted sample resumes and job description PDFs.
 
 Run from the project folder:  python sample_data/make_realistic_resumes.py
+The job descriptions are written in realistic_jobs/*.txt; this makes a PDF of each.
 It needs fpdf2 and the Calibri font that comes with Windows, which is embedded in
 each PDF so the files look the same everywhere. All people, companies, colleges,
 phone numbers and addresses below are fictional.
 """
+from datetime import datetime, timezone
 from pathlib import Path
 
 from fpdf import FPDF
@@ -12,6 +14,7 @@ from fpdf.enums import Align, XPos, YPos
 
 HERE = Path(__file__).parent
 OUT = HERE / "realistic_resumes"
+JOBS = HERE / "realistic_jobs"
 FONTS = Path("C:/Windows/Fonts")
 
 ACCENT = (31, 78, 121)
@@ -531,6 +534,8 @@ RESUMES = {
 class ResumePDF(FPDF):
     def __init__(self):
         super().__init__(format="A4")
+        # A fixed date, so regenerating only changes files whose content changed.
+        self.set_creation_date(datetime(2026, 1, 1, tzinfo=timezone.utc))
         self.add_font("Calibri", "", FONTS / "calibri.ttf")
         self.add_font("Calibri", "B", FONTS / "calibrib.ttf")
         self.add_font("Calibri", "I", FONTS / "calibrii.ttf")
@@ -608,11 +613,42 @@ def build(resume):
     return bytes(pdf.output())
 
 
+def build_job(text):
+    """Lay out a job description: title, details, headings ending in ":" and bullets."""
+    pdf = ResumePDF()
+    pdf.add_page()
+    blocks = text.strip().split("\n\n")
+    details = blocks[0].splitlines()
+    pdf.text_line(details[0].split(":", 1)[1].strip(), size=20, style="B", color=ACCENT, height=9)
+    for line in details[1:]:
+        label, value = line.split(":", 1)
+        pdf.set_text_color(*GREY)
+        pdf.set_font("Calibri", "B", 10.5)
+        pdf.write(5.2, f"{label}: ")
+        pdf.set_font("Calibri", "", 10.5)
+        pdf.write(5.2, value.strip())
+        pdf.ln(5.2)
+    for block in blocks[1:]:
+        heading, *lines = block.splitlines()
+        pdf.heading(heading.rstrip(":"))
+        bullets = [line[2:] for line in lines if line.startswith("- ")]
+        if bullets:
+            for point in bullets:
+                pdf.bullet(point)
+        else:
+            # The .txt wraps paragraphs by hand; let the PDF wrap them instead.
+            pdf.text_line(" ".join(lines))
+    return bytes(pdf.output())
+
+
 def main():
     OUT.mkdir(exist_ok=True)
     for name, resume in RESUMES.items():
         (OUT / name).write_bytes(build(resume))
         print(f"Wrote realistic_resumes/{name}")
+    for job in sorted(JOBS.glob("*.txt")):
+        job.with_suffix(".pdf").write_bytes(build_job(job.read_text(encoding="utf-8")))
+        print(f"Wrote realistic_jobs/{job.stem}.pdf")
 
 
 if __name__ == "__main__":

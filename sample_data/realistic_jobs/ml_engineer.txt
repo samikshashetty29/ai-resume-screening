@@ -1,0 +1,41 @@
+Job Title: Machine Learning Engineer
+Company: Saransh AI Labs
+Location: Hyderabad, India (hybrid)
+Employment type: Full-time
+
+About us:
+Saransh AI builds language and vision products for banks and insurers. Our models read
+documents, route customer messages and check claim photos for millions of customers.
+
+About the role:
+We are hiring a Machine Learning Engineer to design, train and deploy models that run in
+production. You will own models from the first experiment to monitoring after release.
+
+Responsibilities:
+- Train deep learning models for natural language processing and computer vision
+- Turn research code into reliable services
+- Deploy models with Docker and Kubernetes on AWS
+- Maintain CI/CD pipelines for training and deployment
+- Track experiments and monitor models in production
+
+Requirements:
+- 3+ years of experience in machine learning engineering
+- Strong Python with PyTorch or TensorFlow
+- scikit-learn, NumPy and Pandas
+- Docker and Kubernetes
+- A solid background in statistics
+- Comfortable working on Linux
+- Master's degree or bachelor's degree in computer science or a related field
+
+Nice to have:
+- GCP or Azure
+- Spark for large datasets
+- Published research or open-source work
+
+What we offer:
+- Health insurance and a yearly GPU budget for side projects
+- Conference travel once a year
+- Flexible working hours
+
+How to apply:
+Send your resume and a short description of a model you took to production.
