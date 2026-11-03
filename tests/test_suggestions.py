@@ -291,10 +291,11 @@ def test_merged_columns_still_find_skills():
     assert {"react", "typescript", "node.js", "rest api"} <= set(matched)
 
 
-@pytest.mark.parametrize("path", sorted(p.stem for p in (SAMPLES / "resumes").glob("*.pdf")
-                                        if not p.stem.endswith("kabir")))
+@pytest.mark.parametrize("path", sorted(
+    f"{p.parent.name}/{p.name}" for folder in ("resumes", "realistic_resumes")
+    for p in (SAMPLES / folder).glob("*.pdf") if not p.stem.endswith("kabir")))
 def test_normal_layouts_are_not_called_mixed(path):
-    text = extract_text_from_pdf((SAMPLES / "resumes" / f"{path}.pdf").read_bytes())
+    text = extract_text_from_pdf((SAMPLES / path).read_bytes())
     assert not columns_are_mixed(text)
 
 

@@ -11,6 +11,7 @@ from src.text_preprocessing import clean_text
 
 SAMPLES = Path(__file__).resolve().parent.parent / "sample_data"
 RESUMES = SAMPLES / "resumes"
+REALISTIC = SAMPLES / "realistic_resumes"
 JOBS = SAMPLES / "jobs"
 INVALID = SAMPLES / "invalid"
 
@@ -30,6 +31,20 @@ MATCHING_PAIRS = {
     "two_column_tanvi.pdf": "data_analyst.txt",
     "two_column_kabir.pdf": "frontend_developer.txt",
 }
+# Full-length resumes in realistic_resumes/ and the job each was written for.
+REALISTIC_PAIRS = {
+    "ishita_rao_data_analyst.pdf": "data_analyst.txt",
+    "rohit_kulkarni_frontend_developer.pdf": "frontend_developer.txt",
+    "ananya_menon_ml_engineer.pdf": "ml_engineer.txt",
+    "vivek_shetty_java_backend.pdf": "java_backend.txt",
+    "sanya_kapoor_marketing_executive.pdf": "marketing_executive.txt",
+    "kavya_reddy_hr_coordinator.pdf": "hr_coordinator.txt",
+    "arnav_desai_financial_analyst.pdf": "finance_analyst.txt",
+    "meher_joshi_ui_ux_designer.pdf": "ui_ux_designer.txt",
+    "farah_khan_devops_engineer.pdf": "devops_engineer.txt",
+    "nikhil_bhat_android_developer.pdf": "android_developer.txt",
+    "pooja_iyer_project_manager.pdf": "project_manager.txt",
+}
 # Jobs long enough to pass the app's validation.
 FULL_JOBS = ["data_analyst.txt", "frontend_developer.txt", "ml_engineer.txt",
              "java_backend.txt", "hr_coordinator.txt", "marketing_executive.txt",
@@ -37,8 +52,8 @@ FULL_JOBS = ["data_analyst.txt", "frontend_developer.txt", "ml_engineer.txt",
              "devops_engineer.txt", "android_developer.txt", "project_manager.txt"]
 
 
-def resume_text(name):
-    return clean_text(extract_text_from_pdf((RESUMES / name).read_bytes()))
+def resume_text(name, folder=RESUMES):
+    return clean_text(extract_text_from_pdf((folder / name).read_bytes()))
 
 
 def job_text(name):
@@ -122,3 +137,19 @@ def test_marketing_resume_matches_marketing_skills():
     assert {"brand strategy", "social media marketing", "public speaking"} <= set(result["matched_skills"])
     assert result["missing_skills"] == ["excel"]
     assert result["skill_match"] > 80
+
+
+# --- Full-length, realistically formatted resumes ----------------------------
+
+def test_every_job_has_a_realistic_resume():
+    assert sorted(p.name for p in REALISTIC.glob("*.pdf")) == sorted(REALISTIC_PAIRS)
+
+
+@pytest.mark.parametrize("resume,job", REALISTIC_PAIRS.items())
+def test_realistic_resume_scores_highest_on_its_own_job(resume, job):
+    text = resume_text(resume, REALISTIC)
+    assert len(text.split()) > 150
+    own = calculate_similarity(text, job_text(job))
+    assert own > max(calculate_similarity(text, job_text(j)) for j in FULL_JOBS if j != job)
+    result = compare_skills(text, job_text(job))
+    assert len(result["matched_skills"]) > len(result["missing_skills"])

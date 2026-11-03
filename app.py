@@ -12,6 +12,7 @@ from src.highlighter import highlight_text, legend
 from src.matcher import calculate_similarity, top_shared_keywords
 from src.pdf_parser import PDFExtractionError, extract_text_from_pdf
 from src.report_generator import LIMITATION_NOTE, generate_report
+from src.resume_builder import build_resume_draft, job_wording, resume_pdf, unfilled_placeholders
 from src.skill_extractor import category_of, compare_skills
 from src.suggestions import HIGH, LOW, MEDIUM, suggest_improvements
 from src.text_preprocessing import clean_text
@@ -31,6 +32,29 @@ def get_semantic_model():
 def skills_table(skill_names):
     return pd.DataFrame({"Skill": skill_names,
                          "Category": [category_of(s) for s in skill_names]})
+
+
+def show_resume_builder(result, skills, missing, run_key):
+    """Let the person pick skills they have, edit the draft and download it."""
+    confirmed = st.multiselect(
+        "Job skills you really have that your resume doesn't mention",
+        missing, format_func=lambda s: job_wording(s, result["job_raw"]),
+        key=f"confirmed_{run_key}",
+        help="These are added to your skills, with a reminder to show where you used them.")
+    draft = build_resume_draft(result["resume_raw"], result["job_raw"], skills, confirmed)
+    edited = st.text_area("Edit your resume", value=draft, height=480,
+                          key=f"draft_{run_key}_{abs(hash(draft))}")
+    st.caption("Changing the skills above rebuilds the draft and replaces your edits.")
+    reminders = unfilled_placeholders(edited)
+    if reminders:
+        st.warning(f"{len(reminders)} reminder(s) in [square brackets] are still in the draft. "
+                   f"Replace them with real details or delete them before sending.")
+    stem = result["filename"].rsplit(".", 1)[0]
+    d1, d2, _ = st.columns([1, 1, 2])
+    d1.download_button("Download resume (.pdf)", data=resume_pdf(edited),
+                       file_name=f"improved_resume_{stem}.pdf", mime="application/pdf")
+    d2.download_button("Download resume (.txt)", data=edited,
+                       file_name=f"improved_resume_{stem}.txt", mime="text/plain")
 
 
 st.set_page_config(page_title="Resume Screening", page_icon="📄", layout="wide")
@@ -210,6 +234,25 @@ if result:
     else:
         st.success("No major gaps were found between this resume and the job description.")
 
+    st.subheader("Create an improved resume")
+    st.caption("Optional: a draft built from your own resume for this job, with a summary aimed "
+               "at the role, the job's skills first and in its wording, and reminders in "
+               "[square brackets] where you should add details. Nothing is invented, so edit "
+               "the draft before using it.")
+    # A new analysis gets fresh widgets, so old choices can't refer to skills no longer listed.
+    run_key = abs(hash((result["filename"], result["resume_raw"], result["job_raw"])))
+    builder_key = f"builder_open_{run_key}"
+    if not st.session_state.get(builder_key):
+        if st.button("✨ Create an improved resume"):
+            st.session_state[builder_key] = True
+            st.rerun()
+    else:
+        if st.button("Close the resume builder"):
+            st.session_state[builder_key] = False
+            st.rerun()
+        show_resume_builder(result, skills, missing, run_key)
+
+    st.subheader("Screening report")
     report = generate_report(result["filename"], result["similarity"], skills,
                              semantic=result["semantic"], suggestions=result["suggestions"])
     st.download_button(
@@ -218,3 +261,4 @@ if result:
         file_name=f"screening_report_{result['filename'].rsplit('.', 1)[0]}.txt",
         mime="text/plain",
     )
+

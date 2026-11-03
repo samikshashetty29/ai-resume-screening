@@ -61,6 +61,12 @@ The app doesn't save them, but it has no login, so anyone with the link can use 
   years of experience, education, the summary, repeated keywords, and bullets without
   numbers. They run locally and are rule-based, so no AI service sees your resume.
   Only add what is true of your experience. Rules are in `src/suggestions.py`.
+- **Create an improved resume** (optional, behind a button): builds a draft from your resume for this job. It adds
+  a summary aimed at the role, puts the job's skills first in the job's own wording, and
+  adds reminders in [square brackets] where a bullet needs a number or a skill needs an
+  example. Job skills your resume doesn't mention are only added if you tick them as
+  skills you really have. Edit the draft in the app, then download it as a one-column
+  PDF or text file. The code is in `src/resume_builder.py`.
 - **Downloadable text report** with all scores, skills and suggestions.
 
 ## Usage
@@ -70,7 +76,9 @@ The app doesn't save them, but it has no login, so anyone with the link can use 
 3. Click **Analyze Resume**.
 4. Review the three scores, the skills chart, matched skills, skills not detected,
    and the suggestions for improving the resume.
-5. Click **Download report (.txt)** to save the results.
+5. If you want a tailored resume, click **✨ Create an improved resume**, tick any listed job skills you really have, edit
+   the draft and replace the [square bracket] reminders, then download it.
+6. Click **Download report (.txt)** to save the results.
 
 ## Project structure
 
@@ -81,12 +89,14 @@ src/text_preprocessing.py Text cleaning
 src/skill_extractor.py    Skill dictionary, synonyms and matching
 src/semantic_matcher.py   Meaning-based similarity (optional AI model)
 src/suggestions.py        Job-specific resume suggestions
+src/resume_builder.py     Improved resume draft and its PDF
 src/highlighter.py        Skill highlighting in the resume and job text
 src/charts.py             Plotly gauges and charts
 src/matcher.py            TF-IDF + cosine similarity
 src/report_generator.py   Plain-text report
 tests/                    pytest unit tests
-sample_data/              Sample resumes, job descriptions and invalid files (see its README)
+sample_data/              Sample resumes (short ones and full-length realistic ones),
+                          job descriptions and invalid files (see its README)
 ```
 
 ## Running tests
@@ -102,6 +112,9 @@ python -m pytest
   They are prompts to check, not instructions.
 - Two-column PDFs may extract with their columns merged. The app detects this, warns
   about it and skips advice about sections, but it does not rebuild the columns.
+- The improved resume reuses your text and only rearranges and adds to it; it does not
+  rewrite your sentences. For two-column PDFs whose columns merged, it adds the summary
+  and skills above your original text for you to sort into sections.
 - Skill detection only finds words in the dictionary; synonyms may be missed.
 - TF-IDF is lexical and does not understand meaning; the AI score helps, but it
   is still a similarity measure, not a judgement of the candidate.

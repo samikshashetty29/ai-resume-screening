@@ -22,6 +22,28 @@ Fictional resumes, job descriptions and broken files for trying the app and for
 | `two_column_tanvi.pdf` | Two columns, stored one column after the other | `data_analyst.txt` |
 | `two_column_kabir.pdf` | Two columns, stored row by row (harder to extract) | `frontend_developer.txt` |
 
+## Full-length resumes (`realistic_resumes/`)
+
+One-page resumes laid out like real ones: name and contact line, coloured headings,
+skill groups, jobs with dates on the right, bullet points with results, education and
+certifications. There is one for each job description, and each scores highest on its
+own job. They are made by `python sample_data/make_realistic_resumes.py`, which needs
+fpdf2 and the Calibri font that comes with Windows.
+
+| File | Profile | Best matching job |
+|---|---|---|
+| `ishita_rao_data_analyst.pdf` | Data analyst, 3 years: SQL, Power BI, Tableau | `data_analyst.txt` |
+| `rohit_kulkarni_frontend_developer.pdf` | Frontend, 4 years: React, TypeScript, GraphQL | `frontend_developer.txt` |
+| `ananya_menon_ml_engineer.pdf` | ML engineer, 4 years: PyTorch, NLP, MLOps | `ml_engineer.txt` |
+| `vivek_shetty_java_backend.pdf` | Java backend, 6 years: Spring Boot, Kubernetes | `java_backend.txt` |
+| `sanya_kapoor_marketing_executive.pdf` | Marketing, 3 years: social media, launch events | `marketing_executive.txt` |
+| `kavya_reddy_hr_coordinator.pdf` | HR, 3 years: recruitment, onboarding, payroll | `hr_coordinator.txt` |
+| `arnav_desai_financial_analyst.pdf` | Finance, 4 years: budgeting, financial modeling | `finance_analyst.txt` |
+| `meher_joshi_ui_ux_designer.pdf` | Designer, 3 years: Figma, user research | `ui_ux_designer.txt` |
+| `farah_khan_devops_engineer.pdf` | DevOps, 5 years: AWS EKS, Terraform, Jenkins | `devops_engineer.txt` |
+| `nikhil_bhat_android_developer.pdf` | Android, 3 years: Kotlin, Compose, Room | `android_developer.txt` |
+| `pooja_iyer_project_manager.pdf` | Project manager, 7 years: Scrum, PMP | `project_manager.txt` |
+
 ## Job descriptions (`jobs/`)
 
 | File | What it tests |
