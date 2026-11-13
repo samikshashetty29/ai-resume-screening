@@ -69,6 +69,20 @@ The app doesn't save them, but it has no login, so anyone with the link can use 
   PDF or text file. The code is in `src/resume_builder.py`.
 - **Downloadable text report** with all scores, skills and suggestions.
 
+## Screenshots
+
+### Application home screen
+
+![Resume screening home screen](screenshots/01-home.png)
+
+### Screening results
+
+![Resume screening analysis results](screenshots/02-analysis-results.png)
+
+### Improved resume builder
+
+![Improved resume builder](screenshots/03-improved-resume-builder.png)
+
 ## Usage
 
 1. Upload a text-based PDF resume.
