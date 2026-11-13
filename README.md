@@ -79,6 +79,10 @@ The app doesn't save them, but it has no login, so anyone with the link can use 
 
 ![Resume screening analysis results](screenshots/02-analysis-results.png)
 
+### Overall match, score gauges and skills chart
+
+![Overall match, score gauges and skills chart](screenshots/04-overall-match-and-skills.png)
+
 ### Improved resume builder
 
 ![Improved resume builder](screenshots/03-improved-resume-builder.png)
